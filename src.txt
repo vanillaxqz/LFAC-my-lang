@@ -1,0 +1,101 @@
+ENTRY
+USRDEF
+class MyType {
+    Vars:
+        int x;
+        int y;
+    Methods:
+        fn int func(int y) {
+            float z = 5.0;
+            return 1;
+        }
+    Constructs:
+        MyType() {}
+};
+
+GLOBALVAR
+int ix;
+int gix1;
+int gix2;
+float gf = 10.4;
+string gs;
+char gc;
+bool gb;
+int gtab[100];
+class MyType obj;
+
+GLOBALFUNC
+fn int function(int val)
+{
+    int abc;
+    return abc;
+}
+
+fn int f(int z, float f, string s)
+{
+    int x;
+}
+
+fn float ff( int x )
+{
+    float gf;
+}
+
+fn bool check() {
+    return false;
+}
+
+main {
+    int c = 0;
+    if c > 0 {
+        c = 2;
+    } else {
+        c = 3;
+    }
+    c = c + 10;
+    string str = "alalala";
+    float v[125];
+    int i = 1; 
+    v[0] = 1.6 - 2.7;  
+    v[i] = 1.1 + v[0];
+    int u[] = [6, 7, 8];
+    u[i] = -3;
+    Eval(u[i]);
+    Eval( 6+9-200 );
+    int test = 20 + 6 - 20 / 4 + u[i] + function(u[i]);
+
+    for( i = 1; i < 2; i + 1 ) {
+        bool t = true;
+    }
+
+
+    switch c {
+        case 10 : int a = 10; break;
+        default : int b = 2;
+    }
+
+    while a > 5 {
+        b = 1;
+        a = b + 3;
+    }
+
+    gc = 'c';
+    gs = "A string";
+    gb = false;
+    gix1 = 2;
+    gix2 = 100 + gix1;
+    Eval(gc);
+
+    Eval(f(10,10.5,gs));
+    Eval(check());
+    Eval(gb);
+    Eval(true or false);
+    Eval(true and false);
+    obj.x = 5;
+    gtab[5] = 10;
+    Eval(gix1 == 2);
+    gix1 = gix1 + f(10,10.5,gs) + obj.x - gtab[5];
+    TypeOf(gix1+5);
+    TypeOf(gs);
+}
+EXIT

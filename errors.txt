@@ -1,0 +1,24 @@
+const string xcx = "lalala";
+    xcx = "abc";
+
+    const char chh = 'a';
+    chh = 'b';
+
+    const int constint = 5;
+    constint = 6;
+
+    int mix;
+    mix = mix +  ff(10);
+    mix = gb + mix;
+    mix = gf + mix;
+    TypeOf(mix + ff(10));
+    
+    gs = gs + gs ;
+    
+    bool mb = check() + check();
+    
+    f(10,10,10);
+    
+    gs = f(10,10.5, gs);
+    
+^^^ Copy these in src.txt to see error handling
